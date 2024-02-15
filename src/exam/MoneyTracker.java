@@ -1,7 +1,7 @@
-package javaBase.Task1;
+package exam;
 import java.math.BigDecimal;
 import java.util.Scanner;
-public class Main {
+public class MoneyTracker {
     static BigDecimal[] days = new BigDecimal[30];
     static BigDecimal total = new BigDecimal(0);
     static int[] max = {0,0};
