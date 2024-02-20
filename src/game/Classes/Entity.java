@@ -1,19 +1,20 @@
 package game.Classes;
 
 public class Entity {
-    private static boolean ally;
-    private static String name;
-    private static int HP;
-    private static int income;
-    private static int damage;
-    private static int defense;
-    private static int reward;
-    private static int cost;
+    private final boolean ally;
+    private String name;
+    private int HP;
+    private int income;
+    private int damage;
+    private int defense;
+    private int reward;
+    private int cost;
+    private int age;
     public int getHP(){
         return HP;
     }
     public String getName(){
-        return name;
+        return this.name;
     }
     public int getIncome(){
         return income;
@@ -28,7 +29,10 @@ public class Entity {
         return reward;
     }
     public int getCost(){
-        return cost;
+        return this.cost;
+    }
+    public int getAge(){
+        return this.age;
     }
 
     public int attack(Entity target){
@@ -38,7 +42,8 @@ public class Entity {
         HP -= damage;
         return Math.max(HP, 0);
     }
-    public Entity(boolean ally, int HP, int income,int damage, int defense, int cost, int reward, String name) {
+    public Entity(boolean ally, int HP, int income, int damage, int defense, int cost, int reward, String name) {
+        System.out.println("Создано существо \"" + name + "\"");
         this.ally = ally;
         this.HP = HP;
         this.damage = damage;
@@ -46,5 +51,6 @@ public class Entity {
         this.reward = reward;
         this.cost = cost;
         this.name = name;
+        this.age = 0;
     }
 }

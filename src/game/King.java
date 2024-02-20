@@ -1,4 +1,4 @@
-package game.Allies;
+package game;
 
 public class King {
     public static int gold = 0;
