@@ -1,7 +1,7 @@
 package game.Classes;
 
 public class Entity {
-    private final boolean ally;
+    private boolean ally;
     private String name;
     private int HP;
     private int income;
@@ -17,16 +17,16 @@ public class Entity {
         return this.name;
     }
     public int getIncome(){
-        return income;
+        return this.income;
     }
     public int getDamage(){
-        return damage;
+        return this.damage;
     }
     public int getDefense(){
-        return defense;
+        return this.defense;
     }
     public int getReward(){
-        return reward;
+        return this.reward;
     }
     public int getCost(){
         return this.cost;
@@ -46,6 +46,7 @@ public class Entity {
         System.out.println("Создано существо \"" + name + "\"");
         this.ally = ally;
         this.HP = HP;
+        this.income = income;
         this.damage = damage;
         this.defense = defense;
         this.reward = reward;

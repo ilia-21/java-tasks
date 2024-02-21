@@ -13,8 +13,9 @@ public class Play {
     public static Entity[] enemies = new Entity[entityCap/2];
     public static void printInfo(){
         System.out.printf("У вашего короля %d золота и %d здоровья.%n", Core.king.getGold(), Core.king.getHP());
+        System.out.println("У вражеского короля " + Core.enemy.getHP() + " здоровья");
         System.out.println("Выберите ваше действие:");
-        System.out.println("1 - Нанять шахтера ("+Allies.miner.getCost()+" Золота)");
+        System.out.println("1 - Нанять шахтера ("+Allies.miner.getCost()+" Золота) [Добыча: "+Allies.miner.getIncome()+" за ход]");
         System.out.println("2 - Нанять пехотинца ("+Allies.rook.getCost()+" Золота)");
         System.out.println("3 - Нанять рыцаря ("+Allies.knight.getCost()+" Золота)");
         System.out.println("4 - Узнать информацию о нанятых ("+entityCount[0]+")");
