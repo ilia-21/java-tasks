@@ -9,7 +9,7 @@ public class Entity {
     private int defense;
     private int reward;
     private int cost;
-    private int age;
+    private int priority;
     public int getHP(){
         return HP;
     }
@@ -31,19 +31,23 @@ public class Entity {
     public int getCost(){
         return this.cost;
     }
-    public int getAge(){
-        return this.age;
+    public int getPrio(){
+        return this.priority;
     }
 
     public int attack(Entity target){
-        return target.damage(target.getHP()-(getDamage()-(getDamage()*(target.getDefense()/100))));
+        damage = (int)Math.ceil(
+                        getDamage()*(((double) (100-target.getDefense()) /100))
+                );
+        target.hurt(damage);
+
+        return damage;
     }
-    public int damage(int damage){
+    public int hurt(int damage){
         HP -= damage;
         return Math.max(HP, 0);
     }
-    public Entity(boolean ally, int HP, int income, int damage, int defense, int cost, int reward, String name) {
-        System.out.println("Создано существо \"" + name + "\"");
+    public Entity(boolean ally, int HP, int income, int damage, int defense, int cost, int reward, String name, int prio) {
         this.ally = ally;
         this.HP = HP;
         this.income = income;
@@ -52,6 +56,6 @@ public class Entity {
         this.reward = reward;
         this.cost = cost;
         this.name = name;
-        this.age = 0;
+        this.priority = prio;
     }
 }

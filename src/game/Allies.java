@@ -9,8 +9,9 @@ public class Allies {
             0,
             0,
             100,
-            0,
-            "Шахтер"
+            50,
+            "Шахтер",
+            0
     );
 
     public static void main(String[] args) {
@@ -23,8 +24,9 @@ public class Allies {
             10,
             50,
             50,
-            0,
-            "Рыцарь"
+            25,
+            "Рыцарь",
+            1
     );
     public static Entity rook = new Entity(
             true,
@@ -33,7 +35,8 @@ public class Allies {
             5,
             0,
             10,
-            0,
-            "Пехотинец"
+            5,
+            "Пехотинец",
+            2
     );
 }
