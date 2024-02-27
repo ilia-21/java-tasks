@@ -16,10 +16,13 @@ public class Core {
         switch (result){
             case "win":
                 System.out.println("Вы победили!");
+                break;
             case "defeat":
                 System.out.println("Вы проиграли!");
+                break;
             case "error":
                 System.out.println("Игра закончилась из-за ошибки");
+                break;
         }
         System.exit(0);
     }
