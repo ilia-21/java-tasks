@@ -11,3 +11,4 @@ public class Main {
         int found = ArrayFunctions.find(69, array);
     }
 }
+
